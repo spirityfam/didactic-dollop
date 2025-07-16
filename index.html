@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirity Wellness Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .left-side {
+      flex: 0 0 40%;
+      background: #b1d180;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .left-side::after {
+      content: "";
+      position: absolute;
+      right: -50px;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      background: linear-gradient(to right, #b1d180, rgba(255, 255, 255, 0));
+      z-index: 1;
+    }
+
+    .left-side-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .left-side img {
+      max-width: 180px;
+      margin-bottom: 20px;
+      filter: none;
+    }
+
+    .left-side h1 {
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .left-side span {
+      color: white;
+      font-weight: bold;
+    }
+
+    .right-side {
+      flex: 1;
+      background: url('hero-image.png') no-repeat center center/cover;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .left-side {
+        flex: 1;
+        width: 100%;
+      }
+
+      .right-side {
+        flex: 1;
+        width: 100%;
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar-fixed">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="Spirity Logo" class="nav-logo-img" />
+      </div>
+      
+      <div class="nav-menu">
+        <ul class="nav-menu-items">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#transformations" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-cta">
+        <a href="#contact" class="nav-cta-btn">Get Started</a>
+      </div>
+      
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+  <section class="hero-healthifyme">
+    <div class="hero-hm-left">
+      <img src="logo.png" alt="Spirity Wellness Club Logo" class="hero-hm-logo" />
+      <h1 class="hero-hm-tagline">Making the World <span class="highlight-word">Healthier</span> and <span class="highlight-word">Happier</span> Everyday</h1>
+      <a href="#about" class="hero-hm-cta">Know More</a>
+    </div>
+    <div class="hero-hm-right">
+      <img src="your-uploaded-image.png" alt="Virtual Wellness Interaction" class="hero-hm-illustration" />
+    </div>
+  </section>
+
+  <!-- === ABOUT US SECTION (REDESIGNED) === -->
+<section id="about" class="about-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading">Why Spirity?</h2>
+    <div class="about-grid-two-column">
+      <div class="about-left">
+        <div class="about-icon-grid">
+          <div class="about-icon-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 8C11.582 8 8 11.582 8 16C8 20.418 11.582 24 16 24C20.418 24 24 20.418 24 16C24 11.582 20.418 8 16 8ZM16 22C12.686 22 10 19.314 10 16C10 12.686 12.686 10 16 10C19.314 10 22 12.686 22 16C22 19.314 19.314 22 16 22Z" fill="#b1d180"/>
+                <path d="M16 12C13.794 12 12 13.794 12 16C12 18.206 13.794 20 16 20C18.206 20 20 18.206 20 16C20 13.794 18.206 12 16 12ZM16 18C14.895 18 14 17.105 14 16C14 14.895 14.895 14 16 14C17.105 14 18 14.895 18 16C18 17.105 17.105 18 16 18Z" fill="#b1d180"/>
+              </svg>
+            </div>
+          </div>
+          <div class="about-icon-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 2.667L21.333 11H32L23.333 16L26.667 26.667L16 19.333L5.333 26.667L8.667 16L0 11H10.667L16 2.667Z" fill="#b1d180"/>
+              </svg>
+            </div>
+          </div>
+          <div class="about-icon-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 5.333C9.551 5.333 4.333 10.551 4.333 17C4.333 23.449 9.551 28.667 16 28.667C22.449 28.667 27.667 23.449 27.667 17C27.667 10.551 22.449 5.333 16 5.333ZM16 25.333C10.845 25.333 6.667 21.155 6.667 16C6.667 10.845 10.845 6.667 16 6.667C21.155 6.667 25.333 10.845 25.333 16C25.333 21.155 21.155 25.333 16 25.333Z" fill="#b1d180"/>
+                <path d="M16 10.667C13.055 10.667 10.667 13.055 10.667 16C10.667 18.945 13.055 21.333 16 21.333C18.945 21.333 21.333 18.945 21.333 16C21.333 13.055 18.945 10.667 16 10.667ZM16 20C13.791 20 12 18.209 12 16C12 13.791 13.791 12 16 12C18.209 12 20 13.791 20 16C20 18.209 18.209 20 16 20Z" fill="#b1d180"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-cards">
+          <div class="about-card-glass" data-aos="fade-up" data-aos-delay="100">
+            <h3>Our Vision</h3>
+            <p>We aim to build the world's most inspiring wellness movement, transforming lives through sustainable nutrition and community support.</p>
+          </div>
+          <div class="about-card-glass" data-aos="fade-up" data-aos-delay="200">
+            <h3>What We Do</h3>
+            <p>We provide personalized nutrition plans, expert coaching, and wellness education—online and offline—to help people achieve lasting health.</p>
+          </div>
+          <div class="about-card-glass" data-aos="fade-up" data-aos-delay="300">
+            <h3>Our Approach</h3>
+            <p>We combine science-backed nutrition with daily support, accountability, and motivation using community and digital platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === SERVICES SECTION (REDESIGNED) === -->
+<section id="services" class="services-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading">Our Services</h2>
+    <div class="services-grid-glass">
+      <div class="service-card-glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-video" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="Physical Wellness Centers" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="service-content">
+          <h3>Physical Wellness Centers</h3>
+          <p>Visit our physical Spirity Wellness Centers for body analysis, personalized consultations, and community wellness sessions.</p>
+          <div class="service-buttons">
+            <button class="btn-know-more">Know More</button>
+            <button class="btn-join-now">Join Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card-glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-video" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="Virtual Wellness Club" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="service-content">
+          <h3>Virtual Wellness Club</h3>
+          <p>Join live Zoom-based coaching from anywhere in India. Get expert guidance, real-time meal tracking, and daily motivation.</p>
+          <div class="service-buttons">
+            <button class="btn-know-more">Know More</button>
+            <button class="btn-join-now">Join Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card-glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-video" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="10-Day Weight Loss Challenge" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="service-content">
+          <h3>10-Day Weight Loss Challenge</h3>
+          <p>Join our popular 10-day fitness bootcamp on Telegram. Enjoy curated nutrition plans, workout videos, and group motivation.</p>
+          <div class="service-buttons">
+            <button class="btn-know-more">Know More</button>
+            <button class="btn-join-now">Join Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</section>
+
+<!-- === TESTIMONIALS SECTION (REDESIGNED) === -->
+<section id="testimonials" class="testimonials-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading">What Our Members Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card-glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-avatar">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face" alt="Priya S." />
+        </div>
+        <div class="testimonial-content">
+          <div class="rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p>"I lost 5 kg in 10 days! Spirity changed my life completely. The community support and expert guidance made all the difference."</p>
+          <div class="testimonial-author">
+            <h4>Priya S.</h4>
+            <span>Lost 5kg in 10 days</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card-glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-avatar">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Rohit M." />
+        </div>
+        <div class="testimonial-content">
+          <div class="rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p>"The Zoom sessions are so powerful and motivating! The coaches are incredibly supportive and the results speak for themselves."</p>
+          <div class="testimonial-author">
+            <h4>Rohit M.</h4>
+            <span>Virtual Wellness Club Member</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card-glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-avatar">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Ayesha R." />
+        </div>
+        <div class="testimonial-content">
+          <div class="rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p>"The Telegram group keeps me focused daily. The 10-day challenge was exactly what I needed to kickstart my wellness journey."</p>
+          <div class="testimonial-author">
+            <h4>Ayesha R.</h4>
+            <span>10-Day Challenge Graduate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === TEAM/COACHES SECTION (REDESIGNED) === -->
+<section id="coaches" class="coaches-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading">Meet Our Coaches</h2>
+    <div class="coaches-grid">
+      <div class="coach-card-glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="coach-image">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face" alt="Coach Sarah" />
+        </div>
+        <div class="coach-content">
+          <h3>Sarah Johnson</h3>
+          <span class="coach-role">Lead Nutrition Coach</span>
+          <p>"Transform your relationship with food and discover lasting wellness."</p>
+          <button class="btn-know-more">Know More</button>
+        </div>
+      </div>
+      
+      <div class="coach-card-glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="coach-image">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Coach Mike" />
+        </div>
+        <div class="coach-content">
+          <h3>Mike Chen</h3>
+          <span class="coach-role">Fitness & Wellness Coach</span>
+          <p>"Building strength, confidence, and sustainable healthy habits."</p>
+          <button class="btn-know-more">Know More</button>
+        </div>
+      </div>
+      
+      <div class="coach-card-glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="coach-image">
+          <img src="https://images.unsplash.com/photo-1594824475545-9d0c7c495850?w=200&h=200&fit=crop&crop=face" alt="Coach Priya" />
+        </div>
+        <div class="coach-content">
+          <h3>Priya Sharma</h3>
+          <span class="coach-role">Mindfulness & Lifestyle Coach</span>
+          <p>"Creating balance between mind, body, and spirit for holistic wellness."</p>
+          <button class="btn-know-more">Know More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === CTA SECTION (REDESIGNED) === -->
+<section class="cta-section-redesigned">
+  <div class="container">
+    <h2 class="cta-heading">Ready to Begin Your Spirity Journey?</h2>
+    <div class="cta-buttons">
+      <button class="btn-primary">Book a Free Call</button>
+      <button class="btn-secondary">Join the Wellness Club</button>
+    </div>
+  </div>
+</section>
+
+<!-- === FOOTER SECTION (REDESIGNED) === -->
+<footer class="footer-redesigned">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Spirity Logo" class="footer-logo" />
+        <span class="footer-brand-text">Spirity Wellness Club</span>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>About</h4>
+          <a href="#about">Our Vision</a>
+          <a href="#coaches">Our Coaches</a>
+          <a href="#testimonials">Success Stories</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Services</h4>
+          <a href="#services">Physical Centers</a>
+          <a href="#services">Virtual Club</a>
+          <a href="#services">Weight Loss Challenge</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+          <a href="mailto:hello@spirity.com">hello@spirity.com</a>
+          <a href="https://wa.me/919876543210">WhatsApp</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Spirity Wellness Club. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- === VIDEO MODAL (HIDDEN) === -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe id="youtubeFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  
+  <!-- Video Modal Script -->
+  <script>
+    // Immediate video modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Inline script: DOM loaded');
+        
+        const modal = document.getElementById("videoModal");
+        const iframe = document.getElementById("youtubeFrame");
+        const closeBtn = document.querySelector(".modal .close");
+        
+        if (!modal || !iframe || !closeBtn) {
+            console.error('Modal elements missing:', {modal: !!modal, iframe: !!iframe, closeBtn: !!closeBtn});
+            return;
+        }
+        
+        const serviceVideos = document.querySelectorAll(".service-video");
+        console.log('Inline script: Found', serviceVideos.length, 'videos');
+        
+        serviceVideos.forEach((video, index) => {
+            const videoId = video.getAttribute("data-video-id");
+            console.log('Video', index + 1, ':', videoId);
+            
+                         video.addEventListener("click", function(e) {
+                 e.preventDefault();
+                 console.log('Video clicked:', videoId);
+                 
+                 if (videoId) {
+                     // Use exact format: https://www.youtube.com/embed/oG-rg8bX3lw?autoplay=1
+                     const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                     iframe.src = videoUrl;
+                     modal.style.display = "block";
+                     document.body.classList.add("modal-open");
+                     console.log('Video URL:', videoUrl);
+                 }
+             });
+        });
+        
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+            iframe.src = "";
+            document.body.classList.remove("modal-open");
+        });
+        
+        window.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                iframe.src = "";
+                document.body.classList.remove("modal-open");
+            }
+        });
+        
+        console.log('Inline script: Video modal ready');
+    });
+  </script>
+  
+</body>
+</html>
+ScrollTrigger.refresh();
+
+
+
