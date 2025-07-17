@@ -2883,34 +2883,33 @@ body.modal-open {
 .footer-redesigned {
   background: linear-gradient(135deg, #2d5c2f 0%, #1a3d1f 100%);
   color: white;
-  padding: 3rem 0 1.5rem;
-  position: relative;
-  width: 100%;
+  padding: 2rem 0 1rem;
+  overflow: hidden;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 3rem;
-  margin-bottom: 2rem;
-  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+  align-items: start;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .footer-logo {
-  height: 50px;
+  height: 45px;
   width: auto;
   filter: brightness(0) invert(1);
 }
 
 .footer-brand-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #b1d180;
   line-height: 1.2;
@@ -2919,21 +2918,21 @@ body.modal-open {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: start;
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 
 .footer-column h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #b1d180;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
@@ -2941,10 +2940,10 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.3;
 }
 
 .footer-column a:hover {
@@ -2977,16 +2976,16 @@ body.modal-open {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1.5rem;
+  padding-top: 0.75rem;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .footer-bottom p {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* === RESPONSIVE DESIGN === */
@@ -3005,13 +3004,13 @@ body.modal-open {
   
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
   }
   
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .footer-brand {
@@ -3047,25 +3046,25 @@ body.modal-open {
   
   .footer-links {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .footer-redesigned {
-    padding: 2rem 0 1rem;
+    padding: 1.5rem 0 0.75rem;
   }
   
   .footer-content {
-    margin-bottom: 1.5rem;
-  }
-  
-  .footer-column h4 {
-    font-size: 1rem;
     margin-bottom: 0.75rem;
   }
   
-  .footer-column a {
-    font-size: 0.9rem;
+  .footer-column h4 {
+    font-size: 0.95rem;
     margin-bottom: 0.4rem;
+  }
+  
+  .footer-column a {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
   }
   
   .about-icon-grid {
@@ -3512,5 +3511,625 @@ section {
 .youtube-btn:hover {
   background: #c4302b;
   filter: brightness(1.1);
+}
+
+/* === MOBILE OPTIMIZATION ENHANCEMENTS === */
+@media (max-width: 600px) {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body {
+    padding-top: 3rem !important;
+  }
+  .container {
+    padding: 0 0.5rem !important;
+    max-width: 100vw !important;
+  }
+  nav.navbar-fixed, .footer-redesigned {
+    min-width: 0;
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
+  .hero-healthifyme, .hero-hm-left, .hero-hm-right {
+    min-width: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .hero-hm-logo {
+    max-width: 90vw;
+    height: 120px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .hero-hm-tagline {
+    font-size: 1.05rem !important;
+    padding: 0 0.2rem;
+    margin-bottom: 1.2rem !important;
+    word-break: break-word;
+  }
+  .hero-hm-cta {
+    font-size: 0.95rem !important;
+    padding: 0.7rem 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .hero-hm-illustration {
+    max-width: 100vw;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  .about-section-redesigned {
+    padding: 2.5rem 0 1.5rem 0 !important;
+  }
+  .about-grid-two-column {
+    display: block !important;
+    gap: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+  .about-left, .about-right {
+    min-width: 0 !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+  .about-accordion-card {
+    padding: 0.7rem !important;
+    font-size: 0.98rem !important;
+  }
+  .about-accordion-card h3 {
+    font-size: 1rem !important;
+  }
+  .accordion-content p {
+    font-size: 0.95rem !important;
+  }
+  .services-section-redesigned {
+    padding: 2.5rem 0 1.5rem 0 !important;
+  }
+  .services-grid-glass {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+  }
+  .service-card-glass {
+    min-width: 0 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    border-radius: 1rem !important;
+    padding: 0 !important;
+  }
+  .service-video {
+    height: 140px !important;
+  }
+  .service-content {
+    padding: 1rem !important;
+  }
+  .service-content h3 {
+    font-size: 1.05rem !important;
+  }
+  .service-content p {
+    font-size: 0.95rem !important;
+  }
+  .btn-know-more, .btn-join-now {
+    font-size: 0.95rem !important;
+    padding: 0.6rem 1.1rem !important;
+  }
+  .testimonials-section-redesigned {
+    padding: 2.5rem 0 1.5rem 0 !important;
+  }
+  .testimonials-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+  }
+  .testimonial-card-glass {
+    min-width: 0 !important;
+    width: 100% !important;
+    border-radius: 1rem !important;
+    padding: 1rem !important;
+  }
+  .testimonial-video {
+    height: 110px !important;
+  }
+  .testimonial-content p {
+    font-size: 0.95rem !important;
+  }
+  .testimonial-author-name {
+    font-size: 1rem !important;
+  }
+  .coaches-section-redesigned {
+    padding: 2.5rem 0 1.5rem 0 !important;
+  }
+  .coaches-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+  }
+  .coach-card-glass {
+    min-width: 0 !important;
+    width: 100% !important;
+    border-radius: 1rem !important;
+    padding: 1rem !important;
+  }
+  .coach-image {
+    height: 110px !important;
+  }
+  .coach-content h3 {
+    font-size: 1.05rem !important;
+  }
+  .coach-role {
+    font-size: 0.95rem !important;
+  }
+  .coach-content p {
+    font-size: 0.95rem !important;
+  }
+  .cta-section-redesigned {
+    padding: 2.5rem 0 1.5rem 0 !important;
+  }
+  .cta-heading {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .cta-buttons {
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+  }
+  .footer-redesigned {
+    padding: 1.2rem 0 0.5rem 0 !important;
+  }
+  .footer-content {
+    display: block !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-brand {
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+  }
+  .footer-column {
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-logo {
+    height: 32px !important;
+  }
+  .footer-bottom {
+    font-size: 0.8rem !important;
+    padding-top: 0.3rem !important;
+  }
+  /* Floating Social Buttons */
+  .floating-btn, .cta-social-btn {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    font-size: 1rem !important;
+    bottom: 0.7rem !important;
+    left: 0.7rem !important;
+    right: 0.7rem !important;
+    min-width: 2.5rem !important;
+    min-height: 2.5rem !important;
+  }
+  .instagram-btn {
+    left: 0.7rem !important;
+  }
+  .whatsapp-btn {
+    right: 0.7rem !important;
+  }
+  /* Modal adjustments */
+  .modal-content {
+    width: 98vw !important;
+    max-width: 98vw !important;
+    aspect-ratio: 16/9 !important;
+    border-radius: 0.5rem !important;
+  }
+  .close {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1.1rem !important;
+  }
+  /* Accordion touch area */
+  .about-accordion-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    font-size: 1rem !important;
+  }
+  /* Prevent horizontal scroll everywhere */
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    word-break: break-word !important;
+  }
+}
+
+/* Prevent horizontal scroll on all screens */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* === MOBILE-ONLY ENHANCEMENTS (max-width: 768px) === */
+@media (max-width: 768px) {
+  /* 1. Hide 'Contact' nav link when hamburger menu is shown */
+  .nav-menu.active .nav-link[href="#contact"] {
+    display: none !important;
+  }
+
+  /* 2. Header: only logo and hamburger, enlarge touch targets */
+  .nav-menu, .nav-menu-items, .nav-link, .nav-cta {
+    display: none !important;
+  }
+  .nav-container {
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 1rem !important;
+    height: 3.5rem !important;
+  }
+  .nav-logo {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .nav-logo-img {
+    height: 2.5rem !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+  .nav-mobile-toggle {
+    display: flex !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2rem !important;
+    z-index: 1001;
+  }
+  .nav-mobile-toggle .hamburger-line {
+    height: 4px !important;
+    margin: 5px 0 !important;
+    border-radius: 2px !important;
+  }
+
+  /* 3. Hero section: mobile-optimized background, padding, centering, spacing, fluid font sizes, responsive images */
+  .hero-healthifyme {
+    background: linear-gradient(120deg, #b1d180 0%, #e8f0e8 100%) !important;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+    min-height: unset !important;
+    height: auto !important;
+    flex-direction: column !important;
+  }
+  .hero-hm-left {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0 4vw !important;
+  }
+  .hero-hm-logo {
+    display: block;
+    margin: 0 auto 24px auto !important;
+    height: 100px !important;
+    max-width: 80vw !important;
+  }
+  .hero-hm-tagline {
+    margin-bottom: 24px !important;
+    font-size: clamp(1.1rem, 4vw, 1.5rem) !important;
+    line-height: 1.5 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+  }
+  .hero-hm-cta {
+    display: block;
+    margin: 0 auto 24px auto !important;
+    font-size: clamp(1rem, 3vw, 1.2rem) !important;
+    padding: 1rem 2.2rem !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    border-radius: 2.5rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 18px rgba(80,92,80,0.13);
+  }
+  .hero-hm-right {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .hero-hm-illustration {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto 0 auto !important;
+    border-radius: 1.2rem !important;
+    box-shadow: 0 4px 24px rgba(80,92,80,0.10);
+    object-fit: cover !important;
+    object-position: 30% center !important;
+    transform: scale(1.18);
+  }
+  /* Responsive images/media */
+  img, video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  /* 4. Hide/collapse desktop-only elements */
+  .desktop-only {
+    display: none !important;
+  }
+  /* 5. Social icons below CTA, no overlap */
+  .cta-social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 1.2rem !important;
+    margin: 24px auto 0 auto !important;
+    width: 100% !important;
+    position: static !important;
+  }
+  .floating-btn, .cta-social-btn {
+    position: static !important;
+    margin: 0 8px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    font-size: 1.5rem !important;
+    z-index: 1 !important;
+  }
+  /* 6. Lazy-load hint for images */
+  img:not([loading="lazy"]) {
+    content-visibility: auto;
+  }
+  /* 7. Fluid typography, spacing, short paragraphs */
+  html, body {
+    font-size: clamp(1rem, 2.5vw, 1.15rem) !important;
+    line-height: 1.5 !important;
+  }
+  p, .section-heading, .hero-hm-tagline {
+    max-width: 95vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 1.2em !important;
+  }
+  /* 8. Hamburger menu: collapsible, spaced items */
+  .nav-menu.active {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 3.5rem !important;
+    left: 0 !important;
+    width: 100vw !important;
+    background: linear-gradient(90deg, #c3e28f 0%, #d2eca1 100%) !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 1.5rem 0 !important;
+  }
+  .nav-menu-items {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .nav-link {
+    display: block !important;
+    padding: 1.2rem 2rem !important;
+    text-align: center !important;
+    font-size: clamp(1rem, 3vw, 1.2rem) !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+  }
+  .nav-link:hover, .nav-link:focus {
+    background: rgba(255,255,255,0.2) !important;
+    color: #1a3d1f !important;
+  }
+}
+
+/* === HERO IMAGE ZOOM/CROP FOR MOBILE & DESKTOP === */
+.hero-hm-illustration {
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: scale(1.18);
+}
+
+/* === HERO IMAGE ZOOM/CROP: SHOW MORE LEFT === */
+.hero-hm-illustration {
+  object-fit: cover !important;
+  object-position: 30% center !important;
+  transform: scale(1.18);
+}
+
+/* === TESTIMONIAL VIDEO 9:16 ASPECT RATIO === */
+.testimonial-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/16;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-video video,
+.testimonial-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* === TESTIMONIAL TILE & VIDEO 9:16 ASPECT RATIO === */
+.testimonial-card-glass {
+  aspect-ratio: 9/16;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.testimonial-video {
+  aspect-ratio: 9/16;
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-video video,
+.testimonial-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* === FORCE TESTIMONIAL VIDEO TILE TO 9:16, FILL CONTAINER === */
+.testimonial-video {
+  aspect-ratio: 9/16;
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.testimonial-video video,
+.testimonial-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* === USER-DEFINED TESTIMONIAL TILE 9:16 ASPECT RATIO === */
+.testimonial-tile {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  max-width: 280px; /* Adjust as needed */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.testimonial-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === FIX PORTRAIT TESTIMONIAL VIDEO ORIENTATION === */
+.testimonial-tile {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  max-width: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+.testimonial-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(0deg);
+  border-radius: 12px;
+  display: block;
+}
+/* If a video is still sideways, add the .portrait-video class to the <video> tag */
+.testimonial-tile video.portrait-video {
+  transform: rotate(90deg) scale(1.78); /* 16/9 = 1.78, to fill the portrait container */
+}
+
+/* === REFINED TESTIMONIAL VIDEO PORTRAIT LAYOUT === */
+.testimonial-tile .testimonial-video {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.testimonial-tile .testimonial-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* === PERFECT 9:16 PORTRAIT TESTIMONIAL VIDEO TILE === */
+.testimonial-tile .testimonial-video {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.testimonial-tile .testimonial-video video {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  background: #000;
+}
+
+/* === USER-REQUESTED VIDEO WRAPPER FOR 9:16 PORTRAIT === */
+.video-wrapper {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 9 / 16;
 }
 
