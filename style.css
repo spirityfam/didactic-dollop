@@ -1773,10 +1773,10 @@ nav.navbar {
   overflow: hidden;
 }
 .hero-hm-illustration {
-  max-width: 90%;
-  max-height: 80vh;
-  min-width: 220px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   z-index: 2;
   filter: drop-shadow(0 4px 24px rgba(80,92,80,0.10));
   /* Enhanced soft blend on left edge for seamless transition */
@@ -1835,9 +1835,10 @@ nav.navbar {
     background: linear-gradient(to bottom, #b1d180 0%, #b1d180 18%, rgba(177,209,128,0.7) 22%, rgba(255,255,255,0.18) 30%, transparent 60%);
   }
   .hero-hm-illustration {
-    max-width: 98vw;
-    min-width: 120px;
-    max-height: 180px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -2367,7 +2368,7 @@ p, h1, h2, h3, h4, h5, h6, span, div {
 /* === ABOUT SECTION REDESIGNED === */
 .about-section-redesigned {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #f8faf5 0%, #e8f5e8 100%);
+  background: linear-gradient(135deg, #e8f0e8 0%, #d8e8d8 100%);
 }
 
 .about-grid-two-column {
@@ -2556,6 +2557,7 @@ p, h1, h2, h3, h4, h5, h6, span, div {
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .service-content p {
@@ -2569,6 +2571,7 @@ p, h1, h2, h3, h4, h5, h6, span, div {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn-know-more, .btn-join-now {
@@ -2880,7 +2883,9 @@ body.modal-open {
 .footer-redesigned {
   background: linear-gradient(135deg, #2d5c2f 0%, #1a3d1f 100%);
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 3rem 0 1.5rem;
+  position: relative;
+  width: 100%;
 }
 
 .footer-content {
@@ -2888,6 +2893,7 @@ body.modal-open {
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
   margin-bottom: 2rem;
+  align-items: center;
 }
 
 .footer-brand {
@@ -2907,12 +2913,20 @@ body.modal-open {
   font-size: 1.2rem;
   font-weight: 700;
   color: #b1d180;
+  line-height: 1.2;
 }
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer-column h4 {
@@ -2920,6 +2934,7 @@ body.modal-open {
   font-weight: 700;
   color: #b1d180;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .footer-column a {
@@ -2929,6 +2944,7 @@ body.modal-open {
   margin-bottom: 0.5rem;
   transition: all 0.3s ease;
   font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .footer-column a:hover {
@@ -2963,11 +2979,14 @@ body.modal-open {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 .footer-bottom p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* === RESPONSIVE DESIGN === */
@@ -2987,10 +3006,17 @@ body.modal-open {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+    align-items: center;
   }
   
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .footer-brand {
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -3022,6 +3048,24 @@ body.modal-open {
   .footer-links {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .footer-redesigned {
+    padding: 2rem 0 1rem;
+  }
+  
+  .footer-content {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-column a {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
   }
   
   .about-icon-grid {
@@ -3073,5 +3117,400 @@ body.modal-open {
     height: 36px;
     font-size: 1.3rem;
   }
+}
+
+/* Floating Social Media Buttons */
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.floating-btn:active {
+  transform: scale(0.95);
+}
+
+.instagram-btn {
+  left: 2rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram-btn:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: brightness(1.1);
+}
+
+.whatsapp-btn {
+  right: 2rem;
+  background: #25D366;
+}
+
+.whatsapp-btn:hover {
+  background: #128C7E;
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments for floating buttons */
+@media (max-width: 768px) {
+  .floating-btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    bottom: 1.5rem;
+  }
+  
+  .instagram-btn {
+    left: 1.5rem;
+  }
+  
+  .whatsapp-btn {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.1rem;
+    bottom: 1rem;
+  }
+  
+  .instagram-btn {
+    left: 1rem;
+  }
+  
+  .whatsapp-btn {
+    right: 1rem;
+  }
+}
+
+/* Testimonial Video Styles */
+.testimonial-video {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.testimonial-video:hover {
+  transform: scale(1.02);
+}
+
+.testimonial-video:active {
+  transform: scale(0.98);
+}
+
+.testimonial-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.testimonial-video:hover img {
+  filter: brightness(0.8);
+}
+
+.testimonial-video .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #2d5c2f;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.testimonial-video:hover .play-button {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.testimonial-author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive adjustments for testimonial videos */
+@media (max-width: 768px) {
+  .testimonial-video {
+    height: 160px;
+  }
+  
+  .testimonial-video .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-video {
+    height: 140px;
+  }
+  
+  .testimonial-video .play-button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Performance Optimization for Animations */
+* {
+  will-change: auto;
+}
+
+.hero-hm-logo,
+.hero-hm-tagline,
+.hero-hm-cta,
+.hero-hm-illustration,
+.service-card-glass,
+.testimonial-card-glass,
+.coach-card-glass,
+.about-accordion-card,
+.section-heading,
+.cta-heading,
+.cta-buttons,
+.footer-content,
+.floating-btn {
+  will-change: transform, opacity;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced hover effects for cards */
+.service-card-glass,
+.testimonial-card-glass,
+.coach-card-glass {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-glass:hover,
+.testimonial-card-glass:hover,
+.coach-card-glass:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced video hover effects */
+.service-video,
+.testimonial-video {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-video:hover,
+.testimonial-video:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth button transitions */
+.btn-primary,
+.btn-secondary,
+.btn-know-more,
+.btn-join-now,
+.hero-hm-cta {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced floating buttons animation */
+.floating-btn {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Smooth section transitions */
+section {
+  transition: opacity 0.6s ease-out;
+}
+
+/* Enhanced modal animations */
+.video-modal {
+  transition: opacity 0.3s ease-out;
+}
+
+.video-modal-content {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile optimization for animations */
+@media (max-width: 768px) {
+  .service-card-glass:hover,
+  .testimonial-card-glass:hover,
+  .coach-card-glass:hover {
+    transform: translateY(-4px);
+  }
+  
+  .service-video:hover,
+  .testimonial-video:hover {
+    transform: scale(1.02);
+  }
+  
+  .floating-btn {
+    animation: float 2s ease-in-out infinite;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-btn {
+    animation: none;
+  }
+}
+
+/* CTA Social Buttons - Match Floating Button Design */
+.cta-social-btn {
+  position: static;
+  width: 3.5rem;
+  height: 3.5rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  margin: 0;
+  animation: none;
+}
+
+.cta-social-btn i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.cta-social-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.cta-social-btn:active {
+  transform: scale(0.95);
+}
+
+/* Brand color backgrounds for each icon */
+.facebook-btn {
+  background: linear-gradient(45deg, #1877f3 0%, #3b5998 100%);
+}
+.facebook-btn:hover {
+  background: linear-gradient(45deg, #1877f3 0%, #3b5998 100%);
+  filter: brightness(1.1);
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.instagram-btn:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: brightness(1.1);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+}
+.whatsapp-btn:hover {
+  background: #128C7E;
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments for CTA social buttons */
+@media (max-width: 768px) {
+  .cta-social-btn {
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    font-size: 1.25rem;
+  }
+  .cta-social-btn i {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .cta-social-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    font-size: 1.1rem;
+  }
+  .cta-social-btn i {
+    font-size: 1.1rem;
+  }
+}
+
+.youtube-btn {
+  background: #ff0000;
+}
+.youtube-btn:hover {
+  background: #c4302b;
+  filter: brightness(1.1);
 }
 

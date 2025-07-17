@@ -488,6 +488,25 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Video modal functionality initialized successfully');
 });
 
+// === ACCORDION FUNCTIONALITY ===
+function toggleAccordion(element) {
+    const allAccordions = document.querySelectorAll('.about-accordion-card');
+    allAccordions.forEach(accordion => {
+        if (accordion !== element) {
+            const content = accordion.querySelector('.accordion-content');
+            content.style.maxHeight = 0;
+        }
+    });
+    
+    // Toggle current accordion item
+    const content = element.querySelector('.accordion-content');
+    if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+        content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+        content.style.maxHeight = '0';
+    }
+}
+
 // Enhanced GSAP Animations for Redesigned Sections
 gsap.registerPlugin(ScrollTrigger);
 
@@ -822,4 +841,472 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+});
+
+// Spirity Wellness Club - Enhanced Scroll Animations
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Enhanced animations loading...');
+
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 100,
+        delay: 0
+    });
+
+    // GSAP ScrollTrigger setup
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero Section Animations
+    const heroAnimations = () => {
+        const tl = gsap.timeline();
+        
+        tl.from('.hero-hm-logo', {
+            duration: 1.2,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        })
+        .from('.hero-hm-tagline', {
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            ease: 'power2.out'
+        }, '-=0.6')
+        .from('.hero-hm-cta', {
+            duration: 0.8,
+            y: 20,
+            opacity: 0,
+            ease: 'back.out(1.7)'
+        }, '-=0.4')
+        .from('.hero-hm-illustration', {
+            duration: 1.4,
+            x: 100,
+            opacity: 0,
+            ease: 'power2.out'
+        }, '-=0.8');
+    };
+
+    // Parallax effect for hero background
+    gsap.to('.hero-hm-right', {
+        yPercent: -20,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero-healthifyme',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    // About Section Staggered Animations
+    const aboutAnimations = () => {
+        gsap.from('.about-accordion-card', {
+            duration: 0.8,
+            y: 60,
+            opacity: 0,
+            stagger: 0.15,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.about-section-redesigned',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    };
+
+    // Services Section Enhanced Animations
+    const servicesAnimations = () => {
+        // Service cards staggered entrance
+        gsap.from('.service-card-glass', {
+            duration: 1,
+            y: 80,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.services-section-redesigned',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Service video hover effects
+        gsap.utils.toArray('.service-video').forEach(video => {
+            gsap.set(video, { transformOrigin: 'center center' });
+            
+            video.addEventListener('mouseenter', () => {
+                gsap.to(video, {
+                    duration: 0.3,
+                    scale: 1.05,
+                    ease: 'power2.out'
+                });
+            });
+            
+            video.addEventListener('mouseleave', () => {
+                gsap.to(video, {
+                    duration: 0.3,
+                    scale: 1,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    };
+
+    // Testimonials Section Animations
+    const testimonialsAnimations = () => {
+        gsap.from('.testimonial-card-glass', {
+            duration: 1,
+            y: 60,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.testimonials-section-redesigned',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Testimonial video hover effects
+        gsap.utils.toArray('.testimonial-video').forEach(video => {
+            gsap.set(video, { transformOrigin: 'center center' });
+            
+            video.addEventListener('mouseenter', () => {
+                gsap.to(video, {
+                    duration: 0.3,
+                    scale: 1.03,
+                    ease: 'power2.out'
+                });
+            });
+            
+            video.addEventListener('mouseleave', () => {
+                gsap.to(video, {
+                    duration: 0.3,
+                    scale: 1,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    };
+
+    // Coaches Section Animations
+    const coachesAnimations = () => {
+        gsap.from('.coach-card-glass', {
+            duration: 1,
+            y: 60,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.coaches-section-redesigned',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    };
+
+    // CTA Section Animations
+    const ctaAnimations = () => {
+        gsap.from('.cta-heading', {
+            duration: 1,
+            y: 40,
+            opacity: 0,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.cta-section-redesigned',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        gsap.from('.cta-buttons', {
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.cta-section-redesigned',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    };
+
+    // Footer Animations
+    const footerAnimations = () => {
+        gsap.from('.footer-content', {
+            duration: 1,
+            y: 40,
+            opacity: 0,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.footer-redesigned',
+                start: 'top 90%',
+                end: 'bottom 10%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    };
+
+    // Floating Buttons Animation
+    const floatingButtonsAnimation = () => {
+        gsap.from('.floating-btn', {
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'back.out(1.7)',
+            delay: 2
+        });
+    };
+
+    // Smooth Section Transitions
+    const smoothSectionTransitions = () => {
+        gsap.utils.toArray('section').forEach(section => {
+            gsap.from(section, {
+                duration: 1.2,
+                opacity: 0,
+                y: 30,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 85%',
+                    end: 'bottom 15%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    };
+
+    // Enhanced Navigation Animations
+    const navigationAnimations = () => {
+        // Navbar entrance
+        gsap.from('.navbar-fixed', {
+            duration: 1,
+            y: -100,
+            opacity: 0,
+            ease: 'power2.out'
+        });
+
+        // Nav links staggered entrance
+        gsap.from('.nav-link', {
+            duration: 0.6,
+            y: -20,
+            opacity: 0,
+            stagger: 0.1,
+            ease: 'power2.out',
+            delay: 0.3
+        });
+    };
+
+    // Text Reveal Animations
+    const textRevealAnimations = () => {
+        gsap.utils.toArray('.section-heading').forEach(heading => {
+            gsap.from(heading, {
+                duration: 1,
+                y: 40,
+                opacity: 0,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: heading,
+                    start: 'top 85%',
+                    end: 'bottom 15%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    };
+
+    // Card Hover Effects
+    const cardHoverEffects = () => {
+        gsap.utils.toArray('.service-card-glass, .testimonial-card-glass, .coach-card-glass').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    duration: 0.3,
+                    y: -5,
+                    ease: 'power2.out'
+                });
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    duration: 0.3,
+                    y: 0,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    };
+
+    // Initialize all animations
+    const initAnimations = () => {
+        heroAnimations();
+        aboutAnimations();
+        servicesAnimations();
+        testimonialsAnimations();
+        coachesAnimations();
+        ctaAnimations();
+        footerAnimations();
+        floatingButtonsAnimation();
+        smoothSectionTransitions();
+        navigationAnimations();
+        textRevealAnimations();
+        cardHoverEffects();
+    };
+
+    // Performance optimization: Use requestAnimationFrame
+    requestAnimationFrame(() => {
+        initAnimations();
+    });
+
+    // Refresh ScrollTrigger on window resize
+    window.addEventListener('resize', () => {
+        ScrollTrigger.refresh();
+    });
+
+    // Mobile optimization
+    if (window.innerWidth <= 768) {
+        // Reduce animation intensity on mobile
+        gsap.set('.service-card-glass, .testimonial-card-glass, .coach-card-glass', {
+            y: 0
+        });
+    }
+
+    console.log('Enhanced animations loaded successfully!');
+});
+
+// Video Modal Functionality (Enhanced)
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Video modal functionality loading...');
+    
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("videoIframe");
+    const closeBtn = document.querySelector(".video-modal-close");
+    
+    if (!modal || !iframe || !closeBtn) {
+        console.error('Modal elements missing:', {modal: !!modal, iframe: !!iframe, closeBtn: !!closeBtn});
+        return;
+    }
+    
+    const serviceVideos = document.querySelectorAll(".service-video");
+    const testimonialVideos = document.querySelectorAll(".testimonial-video");
+    const allVideos = [...serviceVideos, ...testimonialVideos];
+    console.log('Found', allVideos.length, 'videos');
+    
+    allVideos.forEach((video, index) => {
+        const videoId = video.getAttribute("data-video-id");
+        console.log('Video', index + 1, ':', videoId);
+        
+        video.addEventListener("click", function(e) {
+            e.preventDefault();
+            console.log('Video clicked:', videoId);
+            
+            if (videoId) {
+                const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                iframe.src = videoUrl;
+                
+                // Animate modal entrance
+                gsap.set(modal, { display: 'block', opacity: 0, scale: 0.8 });
+                gsap.to(modal, {
+                    duration: 0.4,
+                    opacity: 1,
+                    scale: 1,
+                    ease: 'back.out(1.7)'
+                });
+                
+                document.body.classList.add("modal-open");
+                console.log('Video URL:', videoUrl);
+            }
+        });
+    });
+    
+    const closeModal = () => {
+        gsap.to(modal, {
+            duration: 0.3,
+            opacity: 0,
+            scale: 0.8,
+            ease: 'power2.in',
+            onComplete: () => {
+                modal.style.display = 'none';
+                iframe.src = '';
+                document.body.classList.remove("modal-open");
+            }
+        });
+    };
+    
+    closeBtn.addEventListener("click", closeModal);
+    
+    window.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
+    
+    console.log('Video modal functionality loaded successfully!');
+});
+
+// Smooth scrolling for navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                gsap.to(window, {
+                    duration: 1.2,
+                    scrollTo: {
+                        y: targetSection,
+                        offsetY: 80
+                    },
+                    ease: 'power2.inOut'
+                });
+            }
+        });
+    });
+});
+
+// Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.nav-mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Animate menu items
+            const menuItems = navMenu.querySelectorAll('.nav-link');
+            if (navMenu.classList.contains('active')) {
+                gsap.from(menuItems, {
+                    duration: 0.4,
+                    y: -20,
+                    opacity: 0,
+                    stagger: 0.1,
+                    ease: 'power2.out'
+                });
+            }
+        });
+    }
 });
