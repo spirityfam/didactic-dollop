@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.605eb910.css",
-    "main.js": "/static/js/main.2afcca2c.js",
-    "static/js/488.a880f349.chunk.js": "/static/js/488.a880f349.chunk.js",
-    "service-worker.js": "/service-worker.js",
-    "index.html": "/index.html",
-    "main.605eb910.css.map": "/static/css/main.605eb910.css.map",
-    "main.2afcca2c.js.map": "/static/js/main.2afcca2c.js.map",
-    "488.a880f349.chunk.js.map": "/static/js/488.a880f349.chunk.js.map"
+    "main.css": "/didactic-dollop/static/css/main.605eb910.css",
+    "main.js": "/didactic-dollop/static/js/main.a6c6d997.js",
+    "static/js/488.a880f349.chunk.js": "/didactic-dollop/static/js/488.a880f349.chunk.js",
+    "service-worker.js": "/didactic-dollop/service-worker.js",
+    "index.html": "/didactic-dollop/index.html",
+    "main.605eb910.css.map": "/didactic-dollop/static/css/main.605eb910.css.map",
+    "main.a6c6d997.js.map": "/didactic-dollop/static/js/main.a6c6d997.js.map",
+    "488.a880f349.chunk.js.map": "/didactic-dollop/static/js/488.a880f349.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.605eb910.css",
-    "static/js/main.2afcca2c.js"
+    "static/js/main.a6c6d997.js"
   ]
 }

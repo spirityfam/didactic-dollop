@@ -2,7 +2,7 @@
   "name": "spirity-redesign",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spiritys.com",
+  "homepage": "https://spirityfam.github.io/didactic-dollop",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
     "aos": "^2.3.4",
