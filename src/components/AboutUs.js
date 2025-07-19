@@ -3,7 +3,7 @@ import React from 'react';
 const features = [
   'Personalized Nutrition Plans',
   'Progress Tracking',
-  'One-on-One Coaching & Support',
+  'One‑on‑One Coaching & Support',
   'Health Education',
   'Reminders and Notifications',
   'Fitness Guidance',

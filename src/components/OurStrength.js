@@ -3,7 +3,7 @@ import React from 'react';
 const strengths = [
   {
     img: '/assets/strength1.jpg',
-    title: 'Your Body Changing With weight loss program',
+    title: 'Your Body Changing With Weight Loss Program',
     desc: '',
   },
   {
@@ -22,7 +22,7 @@ export default function OurStrength() {
   return (
     <section className="bg-accent">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-10 text-dark">Your Body Changing With weight loss program</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-10 text-dark">Your Body Changing With Weight Loss Program</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {strengths.map((item, idx) => (
             <div key={idx} className="bg-white rounded-2xl shadow p-4 flex flex-col items-center w-72">

@@ -11,19 +11,19 @@ const services = [
   },
   {
     title: "Kid's Nutrition",
-    desc: 'Essential vitamins, minerals, and protein to support healthy growth and development and promote overall well-being in children.',
+    desc: 'Essential vitamins, minerals, and protein to support healthy growth and development and promote overall well‑being in children.',
   },
   {
     title: 'Sleep & Stress Management',
-    desc: 'Physical and Mental recovery, while effective stress management helps balance hormones and maintain emotional well-being.',
+    desc: 'Physical and mental recovery, while effective stress management helps balance hormones and maintain emotional well‑being.',
   },
   {
     title: 'Skin Care',
-    desc: 'A personalized skincare routine, along with healthy lifestyle choices, can significantly enhance your skin\'s health and appearance.',
+    desc: 'A personalized skin‑care routine, along with healthy lifestyle choices, can significantly enhance your skin\'s health and appearance.',
   },
   {
     title: 'Boost Energy',
-    desc: 'Boosting energy levels naturally involves a combination of healthy habits that support both physical and mental well-being.',
+    desc: 'Boosting energy levels naturally involves a combination of healthy habits that support both physical and mental well‑being.',
   },
 ];
 

@@ -10,13 +10,13 @@ const platforms = [
   },
   {
     title: "Virtual Wellness Club",
-    desc: "Join live Zoom-based coaching from anywhere in the world. Get expert guidance, real-time meal tracking, and daily motivation.",
+    desc: "Join live Zoom‑based coaching from anywhere in the world. Get expert guidance, real‑time meal tracking, and daily motivation.",
     videoUrl: "/testimonial1.mp4",
     name: "Online Platform"
   },
   {
-    title: "10-Days Transformation Challenge",
-    desc: "Join our popular 10-day fitness bootcamp on Telegram. Enjoy curated nutrition plans, workout videos, and group motivation.",
+    title: "10‑Days Transformation Challenge",
+    desc: "Join our popular 10‑day fitness bootcamp on Telegram. Enjoy curated nutrition plans, workout videos, and group motivation.",
     videoUrl: "/testimonial1.mp4",
     name: "Online/Offline"
   }
