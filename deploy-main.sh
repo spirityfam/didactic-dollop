@@ -29,5 +29,5 @@ echo "🚀 Pushing to GitHub..."
 git push origin main
 
 echo "✅ Deployment completed!"
-echo "🌐 Your website should be available at: https://spirityfam.github.io/didactic-dollop"
+echo "🌐 Your website should be available at: https://spiritys.com"
 echo "⏰ Please wait 2-3 minutes for GitHub Pages to update." 
