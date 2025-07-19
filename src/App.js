@@ -1,15 +1,27 @@
 import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import AboutUs from './components/AboutUs';
+import OurServices from './components/OurServices';
+import OurPlatforms from './components/OurPlatforms';
+import Testimonial from './components/Testimonial';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
+import FloatingSocial from './components/FloatingSocial';
 import './App.css';
 
 function App() {
   return (
-    <div className="App" style={{ padding: '100px 20px', textAlign: 'center' }}>
-      <h1 style={{ color: 'red', fontSize: '48px' }}>SPIRITY WEBSITE IS WORKING!</h1>
-      <p style={{ fontSize: '24px', color: 'blue' }}>If you can see this, React is working correctly.</p>
-      <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#d4eb97', borderRadius: '10px' }}>
-        <h2>Test Content</h2>
-        <p>This is a test to see if the React app is rendering properly.</p>
-      </div>
+    <div className="App bg-gradient-to-br from-purple-50 to-white min-h-screen">
+      <Header />
+      <Hero />
+      <AboutUs />
+      <OurServices />
+      <OurPlatforms />
+      <Testimonial />
+      <ContactUs />
+      <Footer />
+      <FloatingSocial />
     </div>
   );
 }
