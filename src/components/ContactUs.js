@@ -39,14 +39,14 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="bg-white py-20">
+    <section id="contact" className="py-20" style={{ backgroundColor: '#22c55e' }}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-white/90 text-lg max-w-2xl mx-auto">
             Ready to start your wellness journey? Contact us today and let's begin your transformation together.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function ContactUs() {
           <div className="space-y-8">
             {/* Spirity Wellness Center Info */}
             <div className="text-center lg:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Spirity Wellness Center
               </h3>
             </div>
@@ -65,19 +65,24 @@ export default function ContactUs() {
             {/* Information Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => (
-                <div key={index} className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow bg-gray-50">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div key={index} className="text-center p-6 rounded-lg hover:shadow-md transition-shadow"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: '2px solid rgba(255, 255, 255, 0.3)',
+                    backdropFilter: 'blur(12px)'
+                  }}>
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
                     <i className={`${info.icon} text-green-600 text-lg`}></i>
                   </div>
-                  <h3 className="text-gray-500 text-sm font-medium mb-1">{info.heading}</h3>
-                  <p className="text-gray-900 font-semibold">{info.value}</p>
+                  <h3 className="text-white/80 text-sm font-medium mb-1">{info.heading}</h3>
+                  <p className="text-white font-semibold">{info.value}</p>
                 </div>
               ))}
             </div>
 
             {/* Social Media Icons */}
             <div className="text-center lg:text-left">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Follow Us</h4>
+              <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
               <div className="flex justify-center lg:justify-start gap-4">
                 {/* Facebook */}
                 <button
@@ -121,7 +126,7 @@ export default function ContactUs() {
             <div className="text-center lg:text-left">
               <button
                 onClick={handleBookCall}
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-green-600 font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-white/90"
               >
                 BOOK A FREE CALL
               </button>
@@ -147,19 +152,24 @@ export default function ContactUs() {
             </div>
 
             {/* Map Info Card */}
-            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-6">
+            <div className="rounded-2xl p-6"
+              style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(12px)'
+              }}>
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-map-marker-alt text-white text-xl"></i>
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-map-marker-alt text-green-600 text-xl"></i>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Centers</h4>
-                  <p className="text-gray-700 mb-3">
+                  <h4 className="text-lg font-semibold text-white mb-2">Visit Our Centers</h4>
+                  <p className="text-white/90 mb-3">
                     Located in Vasundhara and Indrapuram, our wellness centers are easily accessible and ready to welcome you.
                   </p>
                   <button
                     onClick={() => window.open('https://maps.app.goo.gl/KXbf9p5Hjov8pGqz8', '_blank')}
-                    className="inline-flex items-center text-green-600 hover:text-green-700 font-medium transition-colors"
+                    className="inline-flex items-center text-white hover:text-white/80 font-medium transition-colors"
                   >
                     <i className="fas fa-directions mr-2"></i>
                     Get Directions

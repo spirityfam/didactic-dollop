@@ -41,7 +41,7 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'shadow-lg' : ''
       }`}
-      style={{ backgroundColor: '#d4eb97' }}
+      style={{ backgroundColor: '#22c55e' }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
@@ -73,22 +73,22 @@ const Header = () => {
 
           {/* Desktop Navigation - Center */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-            <div 
-              className="rounded-full px-8 py-3 flex items-center gap-6 transition-all duration-300 hover:shadow-inner"
-              style={{
-                background: 'rgba(255, 255, 255, 0.25)',
-                border: '1px solid rgba(255, 255, 255, 0.4)',
-                boxShadow: 'inset 0 2px 8px rgba(255, 255, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1)',
-                backdropFilter: 'blur(12px)'
-              }}
-            >
+                          <div 
+                className="rounded-full px-8 py-3 flex items-center gap-6 transition-all duration-300 hover:shadow-inner"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  border: '2px solid rgba(255, 255, 255, 0.4)',
+                  boxShadow: 'inset 0 2px 8px rgba(255, 255, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(12px)'
+                }}
+              >
               {navItems.map((item, index) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
                   className="relative font-semibold transition-all duration-300 hover:opacity-80 hover:scale-105"
                   style={{
-                    color: '#2c4e2d',
+                    color: '#ffffff',
                     fontFamily: 'Inter, sans-serif',
                     fontWeight: 600,
                     fontSize: '14px',
@@ -121,8 +121,8 @@ const Header = () => {
             <div 
               className="rounded-2xl py-4 flex flex-col gap-1 transition-all duration-300"
               style={{
-                background: 'rgba(255, 255, 255, 0.25)',
-                border: '1px solid rgba(255, 255, 255, 0.4)',
+                background: 'rgba(255, 255, 255, 0.2)',
+                border: '2px solid rgba(255, 255, 255, 0.4)',
                 boxShadow: 'inset 0 2px 8px rgba(255, 255, 255, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1)',
                 backdropFilter: 'blur(12px)'
               }}
@@ -133,7 +133,7 @@ const Header = () => {
                   onClick={() => scrollToSection(item.id)}
                   className="w-full text-left px-6 py-3 font-semibold transition-all duration-300 hover:bg-white/20 rounded-xl mx-2"
                   style={{
-                    color: '#2c4e2d',
+                    color: '#ffffff',
                     fontFamily: 'Inter, sans-serif',
                     fontWeight: 600,
                     fontSize: '14px'

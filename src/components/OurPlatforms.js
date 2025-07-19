@@ -48,15 +48,20 @@ const OurPlatforms = () => {
   };
 
   return (
-    <section id="platforms" className="w-full py-16 px-4 bg-white">
+    <section id="platforms" className="w-full py-16 px-4" style={{ backgroundColor: '#22c55e' }}>
       <div className="container mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Platforms</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 text-white">Our Platforms</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {platforms.map((platform, idx) => (
             <div 
               key={idx} 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
+              className="rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
+              style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(12px)'
+              }}
               data-aos="fade-up" 
               data-aos-delay={100 * idx}
             >
@@ -85,19 +90,19 @@ const OurPlatforms = () => {
               
               {/* Content Section */}
               <div className="p-6 flex flex-col h-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-xl font-bold text-white mb-3 text-center">
                   {platform.title}
                 </h3>
                 
                 {/* Platform Name */}
-                <p className="text-purple-600 font-semibold text-center mb-4">
+                <p className="text-white font-semibold text-center mb-4">
                   {platform.name}
                 </p>
                 
                 {/* Description with Touch to Expand */}
                 <div className="mb-6 flex-grow">
                   <div 
-                    className="text-gray-600 text-sm leading-relaxed cursor-pointer"
+                    className="text-white/90 text-sm leading-relaxed cursor-pointer"
                     onClick={() => toggleDescription(idx)}
                   >
                     {expandedDesc === idx ? (
@@ -109,7 +114,7 @@ const OurPlatforms = () => {
                           : platform.desc
                         }
                         {platform.desc.length > 80 && (
-                          <span className="text-green-500 font-medium"> (Tap to read more)</span>
+                          <span className="text-white font-medium"> (Tap to read more)</span>
                         )}
                       </span>
                     )}
@@ -120,7 +125,7 @@ const OurPlatforms = () => {
                 <div className="text-center mt-auto">
                   <button
                     onClick={() => handleJoinNow(platform.title)}
-                    className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md w-full max-w-xs"
+                    className="bg-white text-green-600 font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md w-full max-w-xs hover:bg-white/90"
                   >
                     Know More
                   </button>

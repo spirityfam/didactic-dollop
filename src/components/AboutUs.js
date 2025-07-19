@@ -20,7 +20,7 @@ function CheckIcon() {
 
 export default function AboutUs() {
   return (
-    <section id="about" className="bg-white py-20">
+    <section id="about" className="py-20" style={{ backgroundColor: '#22c55e' }}>
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
         {/* Left Image with Brush Stroke */}
         <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 550 }}>
@@ -42,14 +42,14 @@ export default function AboutUs() {
 
         {/* Right Text Content */}
         <div className="flex-1">
-          <p className="text-green-600 font-medium mb-2">About Us</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">Unlock Your Full Potential<br />With Our Support</h2>
-          <p className="text-gray-500 mb-6 text-lg max-w-xl">
-            Welcome to [Your Business Name], your trusted wellness partner! We are passionate about helping individuals like you achieve a healthier, happier lifestyle through personalized nutrition, expert guidance, and consistent support.
+          <p className="text-white font-medium mb-2">About Us</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">Unlock Your Full Potential<br />With Our Support</h2>
+          <p className="text-white/90 mb-6 text-lg max-w-xl">
+            Welcome to Spirity, your trusted wellness partner! We are passionate about helping individuals like you achieve a healthier, happier lifestyle through personalized nutrition, expert guidance, and consistent support.
           </p>
 
           {/* Feature List */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800 text-base">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white text-base">
             {features.map((feature, idx) => (
               <div className="flex items-center gap-2" key={feature}>
                 <CheckIcon />
