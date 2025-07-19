@@ -1,7 +1,7 @@
 import React from "react";
 
 const Hero = () => (
-  <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
+  <section id="hero" className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
     <video
       className="absolute inset-0 w-full h-full object-cover z-0"
       src="/your-hero-video.mp4"
