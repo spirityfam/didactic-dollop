@@ -56,7 +56,7 @@ const OurPlatforms = () => {
           {platforms.map((platform, idx) => (
             <div 
               key={idx} 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
               data-aos="fade-up" 
               data-aos-delay={100 * idx}
             >
@@ -116,13 +116,13 @@ const OurPlatforms = () => {
                   </div>
                 </div>
                 
-                {/* Join Now Button */}
-                <div className="text-center">
+                {/* Know More Button */}
+                <div className="text-center mt-auto">
                   <button
                     onClick={() => handleJoinNow(platform.title)}
                     className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md w-full max-w-xs"
                   >
-                    Join Now
+                    Know More
                   </button>
                 </div>
               </div>
