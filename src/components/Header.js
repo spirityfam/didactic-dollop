@@ -50,11 +50,24 @@ const Header = () => {
           <div className="flex items-center">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="flex flex-col items-start text-white cursor-pointer transition-transform hover:scale-105"
+              className="flex items-center cursor-pointer transition-transform hover:scale-105"
             >
-              <span className="text-xs font-medium leading-tight mb-0.5">SPIRITY</span>
-              <span className="text-2xl font-bold leading-none mb-0.5">S</span>
-              <span className="text-xs font-medium leading-tight">THE SPIRIT OF WELLNESS</span>
+              <img 
+                src="/logo.png" 
+                alt="Spirity - The Spirit of Wellness" 
+                className="h-12 w-auto"
+                style={{ filter: 'brightness(0) invert(1)' }}
+                onError={(e) => {
+                  // Fallback to text if image fails to load
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="flex flex-col items-start text-white" style={{ display: 'none' }}>
+                <span className="text-xs font-medium leading-tight mb-0.5">SPIRITY</span>
+                <span className="text-2xl font-bold leading-none mb-0.5">S</span>
+                <span className="text-xs font-medium leading-tight">THE SPIRIT OF WELLNESS</span>
+              </div>
             </button>
           </div>
 
