@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: "fas fa-map-marker-alt",
     heading: "Address",
-    value: "vasundhara and indrapuram"
+    value: "Vasundhara and Indrapuram"
   }
 ];
 
