@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const platforms = [
   {
-    title: "Physical Wellness Centers",
-    desc: "Visit our physical Spirity Wellness Centers for body analysis, personalized consultations, and community wellness sessions.",
+    title: "Wellness Centers",
+    desc: "Visit our Spirity Wellness Centers for body analysis, personalized consultations, and community wellness sessions.",
     videoUrl: "/testimonial1.mp4",
-    name: "Vasundhara Center"
+    name: "Physical Centers"
   },
   {
     title: "Virtual Wellness Club",
@@ -17,7 +17,7 @@ const platforms = [
     title: "10-Days Transformation Challenge",
     desc: "Join our popular 10-day fitness bootcamp on Telegram. Enjoy curated nutrition plans, workout videos, and group motivation.",
     videoUrl: "/testimonial1.mp4",
-    name: "Telegram Group"
+    name: "Online/Offline"
   }
 ];
 
@@ -83,7 +83,7 @@ const OurPlatforms = () => {
               </div>
               
               {/* Content Section */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   {platform.title}
                 </h3>
@@ -94,7 +94,7 @@ const OurPlatforms = () => {
                 </p>
                 
                 {/* Description with Touch to Expand */}
-                <div className="mb-6">
+                <div className="mb-6 flex-grow">
                   <div 
                     className="text-gray-600 text-sm leading-relaxed cursor-pointer"
                     onClick={() => toggleDescription(idx)}
@@ -119,7 +119,7 @@ const OurPlatforms = () => {
                 <div className="text-center">
                   <button
                     onClick={() => handleJoinNow(platform.title)}
-                    className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md"
+                    className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md w-full max-w-xs"
                   >
                     Join Now
                   </button>
