@@ -18,7 +18,7 @@ const Hero = () => (
       </h1>
       <a
         href="#about"
-        className="glassy-button text-lg mt-2"
+        className="glassy-button text-lg mt-6 px-8 py-4 font-semibold text-white"
       >
         Get Started
       </a>
