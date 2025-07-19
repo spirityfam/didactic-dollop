@@ -71,8 +71,8 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Desktop Navigation - Right Side */}
-          <div className="hidden md:block">
+          {/* Desktop Navigation - Center */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
             <div 
               className="rounded-full px-8 py-3 flex items-center gap-6 transition-all duration-300 hover:shadow-inner"
               style={{
@@ -102,15 +102,17 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          {/* Mobile Menu Button - Right Side */}
+          <div className="flex items-center">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation Dropdown */}
