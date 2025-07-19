@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirity Wellness Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .left-side {
+      flex: 0 0 40%;
+      background: #b1d180;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .left-side::after {
+      content: "";
+      position: absolute;
+      right: -50px;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      background: linear-gradient(to right, #b1d180, rgba(255, 255, 255, 0));
+      z-index: 1;
+    }
+
+    .left-side-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .left-side img {
+      max-width: 180px;
+      margin-bottom: 20px;
+      filter: none;
+    }
+
+    .left-side h1 {
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .left-side span {
+      color: white;
+      font-weight: bold;
+    }
+
+    .right-side {
+      flex: 1;
+      background: url('hero-image.png') no-repeat center center/cover;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .left-side {
+        flex: 1;
+        width: 100%;
+      }
+
+      .right-side {
+        flex: 1;
+        width: 100%;
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar-fixed">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="Spirity Logo" class="nav-logo-img" />
+      </div>
+      
+      <div class="nav-menu">
+        <ul class="nav-menu-items">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#footer" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+  <section class="hero-healthifyme">
+    <a id="home"></a>
+    <div class="hero-hm-left" data-aos="fade-in" data-aos-delay="200">
+      <img src="logo.png" alt="Spirity Wellness Club Logo" class="hero-hm-logo" />
+      <h1 class="hero-hm-tagline">Making the World <span class="highlight-word">Healthier</span> and <span class="highlight-word">Happier</span> Everyday</h1>
+      <a href="#services" class="hero-hm-cta">Know More</a>
+    </div>
+    <div class="hero-hm-right" data-aos="fade-in" data-aos-delay="400">
+      <img src="your-uploaded-image.jpg" alt="Virtual Wellness Interaction" class="hero-hm-illustration" />
+    </div>
+  </section>
+
+  <!-- === ABOUT US SECTION (REDESIGNED) === -->
+<section id="about" class="about-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading" data-aos="zoom-in" data-aos-delay="100">Why Spirity?</h2>
+    <div class="about-grid-two-column" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: start; margin-bottom: 4rem;">
+      <div class="about-left" style="display: flex; flex-direction: column; gap: 1rem; flex: 1; min-width: 300px;">
+        <div class="about-accordion-card" data-aos="fade-up" data-aos-delay="100" onclick="toggleAccordion(this)" style="cursor: pointer; background: rgba(255,255,255,0.25); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2), 0 6px 20px rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1)'">
+          <h3 style="margin: 0; color: #b1d180; font-size: 1.1rem; font-weight: 600;">Personal Wellness Plans</h3>
+          <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="margin: 1rem 0 0 0; color: #666; line-height: 1.6;">Spirity offers a step-by-step wellness journey tailored to your body, lifestyle, and goals—so you're never guessing what to do next.</p>
+          </div>
+        </div>
+        
+        <div class="about-accordion-card" data-aos="fade-up" data-aos-delay="200" onclick="toggleAccordion(this)" style="cursor: pointer; background: rgba(255,255,255,0.25); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2), 0 6px 20px rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1)'">
+          <h3 style="margin: 0; color: #b1d180; font-size: 1.1rem; font-weight: 600;">Daily Smart Guidance</h3>
+          <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="margin: 1rem 0 0 0; color: #666; line-height: 1.6;">Our system sends you the right reminders, nutrition tasks, and workouts at the perfect time—keeping you focused and consistent, even on busy days.</p>
+          </div>
+        </div>
+        
+        <div class="about-accordion-card" data-aos="fade-up" data-aos-delay="300" onclick="toggleAccordion(this)" style="cursor: pointer; background: rgba(255,255,255,0.25); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2), 0 6px 20px rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1)'">
+          <h3 style="margin: 0; color: #b1d180; font-size: 1.1rem; font-weight: 600;">Progress You Can See</h3>
+          <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="margin: 1rem 0 0 0; color: #666; line-height: 1.6;">You'll receive body scan reports, goal tracking, and instant feedback to clearly see your improvement week by week.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-right" style="display: flex; flex-direction: column; gap: 1rem; flex: 1; min-width: 300px;">
+        <div class="about-accordion-card" data-aos="fade-up" data-aos-delay="400" onclick="toggleAccordion(this)" style="cursor: pointer; background: rgba(255,255,255,0.25); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2), 0 6px 20px rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1)'">
+          <h3 style="margin: 0; color: #b1d180; font-size: 1.1rem; font-weight: 600;">Everything in One Flow</h3>
+          <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="margin: 1rem 0 0 0; color: #666; line-height: 1.6;">From personalized meal plans to expert coaching and community groups, everything you need is connected through one smart flow.</p>
+          </div>
+        </div>
+        
+        <div class="about-accordion-card" data-aos="fade-up" data-aos-delay="500" onclick="toggleAccordion(this)" style="cursor: pointer; background: rgba(255,255,255,0.25); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2), 0 6px 20px rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1)'">
+          <h3 style="margin: 0; color: #b1d180; font-size: 1.1rem; font-weight: 600;">Fits Busy Lifestyles</h3>
+          <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="margin: 1rem 0 0 0; color: #666; line-height: 1.6;">Whether you're a student, parent, or working professional, Spirity fits into your lifestyle and helps you get healthier without confusion.</p>
+          </div>
+        </div>
+        
+        <div class="about-accordion-card" data-aos="fade-up" data-aos-delay="600" onclick="toggleAccordion(this)" style="cursor: pointer; background: rgba(255,255,255,0.25); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 1rem; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2), 0 6px 20px rgba(255,255,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(255,255,255,0.1)'">
+          <h3 style="margin: 0; color: #b1d180; font-size: 1.1rem; font-weight: 600;">Long-Term Habit Building</h3>
+          <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="margin: 1rem 0 0 0; color: #666; line-height: 1.6;">Our system is built to help you form long-term healthy habits, not temporary fixes—so you feel better, look better, and stay that way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === SERVICES SECTION (REDESIGNED) === -->
+<section id="services" class="services-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading" data-aos="fade-up-right" data-aos-delay="100">Our Services</h2>
+    <div class="services-grid-glass">
+      <div class="service-card-glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-video" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="Physical Wellness Centers" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="service-content">
+          <h3>Physical Wellness Centers</h3>
+          <p>Visit our physical Spirity Wellness Centers for body analysis, personalized consultations, and community wellness sessions.</p>
+          <div class="service-buttons">
+            <a href="https://calendly.com/spirityfam/30min" target="_blank" rel="noopener noreferrer" class="btn-join-now">Join Now</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card-glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-video" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="Virtual Wellness Club" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="service-content">
+          <h3>Virtual Wellness Club</h3>
+          <p>Join live Zoom-based coaching from anywhere in the world. Get expert guidance, real-time meal tracking, and daily motivation.</p>
+          <div class="service-buttons">
+            <a href="https://calendly.com/spirityfam/30min" target="_blank" rel="noopener noreferrer" class="btn-join-now">Join Now</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card-glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-video" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="10-Days Transformation Challenge" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="service-content">
+          <h3>10-Days Transformation Challenge</h3>
+          <p>Join our popular 10-day fitness bootcamp on Telegram. Enjoy curated nutrition plans, workout videos, and group motivation.</p>
+          <div class="service-buttons">
+            <a href="https://calendly.com/spirityfam/30min" target="_blank" rel="noopener noreferrer" class="btn-join-now">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === TESTIMONIALS SECTION (REDESIGNED) === -->
+<section id="testimonials" class="testimonials-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading" data-aos="flip-left" data-aos-delay="100">What Our Members Say</h2>
+    <h2 class="section-heading" style="text-align:center; margin-top:2.5rem; margin-bottom:2.5rem;">Testimonials</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card-glass testimonial-tile" data-aos="fade-up" data-aos-delay="100">
+        <div class="video-wrapper">
+          <video src="testimonial1.mp4" controls preload="metadata" poster="your-uploaded-image.jpg" playsinline></video>
+        </div>
+        <div class="testimonial-content">
+          <h4 class="testimonial-author-name">Priya S.</h4>
+        </div>
+      </div>
+      
+      <div class="testimonial-card-glass testimonial-tile" data-aos="fade-up" data-aos-delay="200">
+        <div class="video-wrapper" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="Rohit M. Testimonial" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="testimonial-content">
+          <h4 class="testimonial-author-name">Rohit M.</h4>
+        </div>
+      </div>
+      
+      <div class="testimonial-card-glass testimonial-tile" data-aos="fade-up" data-aos-delay="300">
+        <div class="video-wrapper" data-video-id="oG-rg8bX3lw">
+          <img src="https://img.youtube.com/vi/oG-rg8bX3lw/hqdefault.jpg" alt="Ayesha R. Testimonial" />
+          <span class="play-button">▶</span>
+        </div>
+        <div class="testimonial-content">
+          <h4 class="testimonial-author-name">Ayesha R.</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === TEAM/COACHES SECTION (REDESIGNED) === -->
+<section id="coaches" class="coaches-section-redesigned">
+  <div class="container">
+    <h2 class="section-heading" data-aos="zoom-in" data-aos-delay="100">Meet Our Coaches</h2>
+    <div class="coaches-grid">
+      <div class="coach-card-glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="coach-image">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face" alt="Coach Sarah" />
+        </div>
+        <div class="coach-content">
+          <h3>Sarah Johnson</h3>
+          <span class="coach-role">Lead Nutrition Coach</span>
+          <p>"Transform your relationship with food and discover lasting wellness."</p>
+        </div>
+      </div>
+      
+      <div class="coach-card-glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="coach-image">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Coach Mike" />
+        </div>
+        <div class="coach-content">
+          <h3>Mike Chen</h3>
+          <span class="coach-role">Fitness & Wellness Coach</span>
+          <p>"Building strength, confidence, and sustainable healthy habits."</p>
+        </div>
+      </div>
+      
+      <div class="coach-card-glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="coach-image">
+          <img src="https://images.unsplash.com/photo-1594824475545-9d0c7c495850?w=200&h=200&fit=crop&crop=face" alt="Coach Priya" />
+        </div>
+        <div class="coach-content">
+          <h3>Priya Sharma</h3>
+          <span class="coach-role">Mindfulness & Lifestyle Coach</span>
+          <p>"Creating balance between mind, body, and spirit for holistic wellness."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === CTA SECTION (REDESIGNED) === -->
+<section class="cta-section-redesigned">
+  <div class="container">
+    <h2 class="cta-heading" data-aos="fade-up" data-aos-delay="100">Ready to Begin Your Spirity Journey?</h2>
+    <div class="cta-social-and-buttons" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center;" data-aos="fade-up" data-aos-delay="200">
+      <div class="cta-social-links" style="display: flex; gap: 1.2rem;">
+        <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61575999476952" class="floating-btn cta-social-btn facebook-btn" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/spirityfam/" class="floating-btn cta-social-btn instagram-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919958715050" class="floating-btn cta-social-btn whatsapp-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.youtube.com/@spirityfam" target="_blank" rel="noopener noreferrer" class="floating-btn cta-social-btn youtube-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <a href="https://calendly.com/spirityfam/30min" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a Free Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- === FOOTER SECTION (REDESIGNED) === -->
+<footer id="footer" class="footer-redesigned">
+  <div class="container">
+    <div class="footer-content" data-aos="fade-up" data-aos-delay="100">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Spirity Logo" class="footer-logo" />
+        <span class="footer-brand-text">Spirity Wellness Club</span>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>About</h4>
+          <a href="#about">Our Vision</a>
+          <a href="#coaches">Our Coaches</a>
+          <a href="#testimonials">Success Stories</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Services</h4>
+          <a href="#services">Physical Centers</a>
+          <a href="#services">Virtual Club</a>
+          <a href="#services">Weight Loss Challenge</a>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <a href="tel:+919958715050">+91 99587 15050</a>
+          <a href="mailto:Spirityfam@gmail.com">Spirityfam@gmail.com</a>
+          <a href="https://wa.me/919958715050">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="200">
+      <p>&copy; 2025 Spirity Wellness Club. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- === VIDEO MODAL (HIDDEN) === -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe id="youtubeFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  
+  <!-- AOS Initialization -->
+  <script>
+    AOS.init({ 
+      duration: 1000, 
+      once: true,
+      offset: 100,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+  
+  <script src="script.js"></script>
+  
+  <!-- Video Modal Script -->
+  <script>
+    // Immediate video modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Inline script: DOM loaded');
+        
+        const modal = document.getElementById("videoModal");
+        const iframe = document.getElementById("youtubeFrame");
+        const closeBtn = document.querySelector(".modal .close");
+        
+        if (!modal || !iframe || !closeBtn) {
+            console.error('Modal elements missing:', {modal: !!modal, iframe: !!iframe, closeBtn: !!closeBtn});
+            return;
+        }
+        
+        const serviceVideos = document.querySelectorAll(".service-video");
+        const testimonialVideos = document.querySelectorAll(".testimonial-video");
+        const allVideos = [...serviceVideos, ...testimonialVideos];
+        console.log('Inline script: Found', allVideos.length, 'videos');
+        
+        allVideos.forEach((video, index) => {
+            const videoId = video.getAttribute("data-video-id");
+            console.log('Video', index + 1, ':', videoId);
+            
+            video.addEventListener("click", function(e) {
+                e.preventDefault();
+                console.log('Video clicked:', videoId);
+                
+                if (videoId) {
+                    // Use exact format: https://www.youtube.com/embed/oG-rg8bX3lw?autoplay=1
+                    const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                    iframe.src = videoUrl;
+                    modal.style.display = "block";
+                    document.body.classList.add("modal-open");
+                    console.log('Video URL:', videoUrl);
+                }
+            });
+        });
+        
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+            iframe.src = "";
+            document.body.classList.remove("modal-open");
+        });
+        
+        window.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                iframe.src = "";
+                document.body.classList.remove("modal-open");
+            }
+        });
+        
+        console.log('Inline script: Video modal ready');
+    });
+  </script>
+  
+  <!-- Floating Social Media Buttons -->
+  <a href="https://www.instagram.com/spirityfam/" class="floating-btn instagram-btn" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  
+  <a href="https://wa.me/919958715050" class="floating-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <span class="video-modal-close">&times;</span>
+      <div class="video-container">
+        <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+ScrollTrigger.refresh();
+
+
+
