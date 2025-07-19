@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// Updated platform information with proper titles and names
 const platforms = [
   {
     title: "Wellness Centers",
