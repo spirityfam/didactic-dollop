@@ -3,18 +3,15 @@ import React from "react";
 const testimonials = [
   {
     name: "Rohit M.",
-    video: "/testimonial1.mp4",
-    poster: "/your-uploaded-image.jpg"
+    video: "https://www.youtube.com/shorts/yc8kqhQEfRQ"
   },
   {
     name: "Priya S.",
-    video: "/testimonial2.MOV",
-    poster: "/your-uploaded-image.jpg"
+    video: "https://www.youtube.com/shorts/mvjXFphSUck"
   },
   {
     name: "Ayesha R.",
-    video: "/testimonial1.mp4",
-    poster: "/your-uploaded-image.jpg"
+    video: "https://www.youtube.com/shorts/-xpELLzE6JQ"
   }
 ];
 
@@ -32,12 +29,14 @@ const Testimonial = () => (
             data-aos-delay={index * 100}
           >
             <div className="video-wrapper mb-4 w-full">
-              <video 
-                src={testimonial.video} 
-                controls 
-                playsInline 
-                poster={testimonial.poster} 
+              <iframe 
+                src={`${testimonial.video}/embed`}
+                title={`${testimonial.name} Testimonial`}
                 className="w-full rounded-xl shadow-md"
+                style={{ aspectRatio: '9/16', minHeight: '400px' }}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             </div>
             <p className="font-semibold text-lg text-purple-900">{testimonial.name}</p>
