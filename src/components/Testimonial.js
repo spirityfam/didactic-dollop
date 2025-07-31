@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     name: "Priya S.",
-    video: "/testimonial1.mp4",
+    video: "/testimonial2.MOV",
     poster: "/your-uploaded-image.jpg"
   },
   {
