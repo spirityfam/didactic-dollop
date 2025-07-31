@@ -3,15 +3,15 @@ import React from "react";
 const testimonials = [
   {
     name: "Rohit M.",
-    video: "https://www.youtube.com/shorts/yc8kqhQEfRQ"
+    video: "yc8kqhQEfRQ"
   },
   {
     name: "Priya S.",
-    video: "https://www.youtube.com/shorts/mvjXFphSUck"
+    video: "mvjXFphSUck"
   },
   {
     name: "Ayesha R.",
-    video: "https://www.youtube.com/shorts/-xpELLzE6JQ"
+    video: "-xpELLzE6JQ"
   }
 ];
 
@@ -30,10 +30,10 @@ const Testimonial = () => (
           >
             <div className="video-wrapper mb-4 w-full">
               <iframe 
-                src={`${testimonial.video}/embed`}
+                src={`https://www.youtube.com/embed/${testimonial.video}`}
                 title={`${testimonial.name} Testimonial`}
                 className="w-full rounded-xl shadow-md"
-                style={{ aspectRatio: '9/16', minHeight: '400px' }}
+                style={{ aspectRatio: '16/9', minHeight: '300px' }}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
