@@ -3,15 +3,15 @@ import React from "react";
 const testimonials = [
   {
     name: "Rohit M.",
-    video: "yc8kqhQEfRQ" // YouTube Shorts ID
+    videoUrl: "https://www.youtube.com/embed/yc8kqhQEfRQ?autoplay=0&modestbranding=1"
   },
   {
     name: "Priya S.",
-    video: "mvjXFphSUck"
+    videoUrl: "https://www.youtube.com/embed/mvjXFphSUck?autoplay=0&modestbranding=1"
   },
   {
     name: "Ayesha R.",
-    video: "-xpELLzE6JQ"
+    videoUrl: "https://www.youtube.com/embed/-xpELLzE6JQ?autoplay=0&modestbranding=1"
   }
 ];
 
@@ -29,8 +29,8 @@ const Testimonial = () => (
             data-aos-delay={index * 100}
           >
             <div className="video-wrapper mb-4 w-full">
-              <iframe
-                src={`https://www.youtube.com/embed/${testimonial.video}?rel=0&modestbranding=1`}
+              <iframe 
+                src={testimonial.videoUrl}
                 title={`${testimonial.name} Testimonial`}
                 className="w-full rounded-xl shadow-md"
                 style={{ aspectRatio: '16/9', minHeight: '300px' }}
@@ -47,4 +47,4 @@ const Testimonial = () => (
   </section>
 );
 
-export default Testimonial; 
+export default Testimonial;
