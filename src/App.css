@@ -77,9 +77,8 @@
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 280px; /* YouTube Shorts width */
-  padding-bottom: calc(280px * (9 / 16)); /* YouTube Shorts aspect ratio */
-  height: 0;
+  max-width: 300px; /* YouTube Shorts width */
+  height: calc(300px * (16 / 9)); /* YouTube Shorts aspect ratio */
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 2px 16px rgba(80, 0, 120, 0.12);
@@ -88,15 +87,15 @@
 
 @media (min-width: 768px) {
   .video-container {
-    max-width: 320px; /* Slightly larger on desktop */
-    padding-bottom: calc(320px * (9 / 16));
+    max-width: 350px; /* Slightly larger on desktop */
+    height: calc(350px * (16 / 9));
   }
 }
 
 @media (min-width: 1024px) {
   .video-container {
-    max-width: 360px; /* Even larger on larger screens */
-    padding-bottom: calc(360px * (9 / 16));
+    max-width: 400px; /* Even larger on larger screens */
+    height: calc(400px * (16 / 9));
   }
 }
 

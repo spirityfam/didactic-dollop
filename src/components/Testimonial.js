@@ -4,17 +4,14 @@ const testimonials = [
   {
     name: "Rajan Handa",
     videoId: "yc8kqhQEfRQ",
-    thumbnail: "/logo 2.png",
   },
   {
     name: "Diksha",
     videoId: "mvjXFphSUck",
-    thumbnail: "/logo 2.png",
   },
   {
     name: "Geeta Devgan",
     videoId: "-xpELLzE6JQ",
-    thumbnail: "/logo 2.png",
   },
 ];
 
@@ -31,27 +28,21 @@ const Testimonial = () => (
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div className="video-container mb-4 relative">
-              <a
-                href={`https://www.youtube.com/watch?v=${testimonial.videoId}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full h-full"
-              >
-                <img
-                  src={testimonial.thumbnail}
-                  alt={`${testimonial.name} Testimonial`}
-                  className="w-full h-full object-cover rounded-xl"
-                  style={{ aspectRatio: '9/16' }}
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-xl hover:bg-opacity-40 transition-all duration-300">
-                  <div className="bg-red-600 rounded-full p-4 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                </div>
-              </a>
+            <div className="video-container mb-4">
+              <iframe
+                src={`https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&controls=1&autoplay=0`}
+                title={`${testimonial.name} Testimonial`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ 
+                  aspectRatio: '9/16',
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '1rem'
+                }}
+              />
             </div>
             <p className="font-semibold text-lg text-purple-900">{testimonial.name}</p>
           </div>
