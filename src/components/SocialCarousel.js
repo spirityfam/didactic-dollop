@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     name: 'YouTube',
-    url: 'https://www.youtube.com/@spirityfam/featured',
+    url: 'https://www.youtube.com/@spirityfam/shorts',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg',
     handle: '@spirityfam',
     color: 'bg-red-600',
