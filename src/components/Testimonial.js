@@ -3,18 +3,18 @@ import React from "react";
 const testimonials = [
   {
     name: "Rajan Handa",
-    link: "https://www.youtube.com/shorts/yc8kqhQEfRQ",
-    thumbnail: "/logo.png",
+    videoId: "yc8kqhQEfRQ",
+    thumbnail: "/logo2.png",
   },
   {
     name: "Diksha",
-    link: "https://www.youtube.com/shorts/mvjXFphSUck",
-    thumbnail: "/logo.png",
+    videoId: "mvjXFphSUck",
+    thumbnail: "/logo2.png",
   },
   {
     name: "Geeta Devgan",
-    link: "https://www.youtube.com/shorts/-xpELLzE6JQ",
-    thumbnail: "/logo.png",
+    videoId: "-xpELLzE6JQ",
+    thumbnail: "/logo2.png",
   },
 ];
 
@@ -31,19 +31,16 @@ const Testimonial = () => (
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <a
-              href={testimonial.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full mb-4 rounded-xl overflow-hidden"
-            >
-              <img
-                src={testimonial.thumbnail}
-                alt={`${testimonial.name} thumbnail`}
-                className="w-full rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
-                style={{ aspectRatio: '9/16', objectFit: 'cover' }}
+            <div className="video-container mb-4">
+              <iframe
+                src={`https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1`}
+                title={`${testimonial.name} Testimonial`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
               />
-            </a>
+            </div>
             <p className="font-semibold text-lg text-purple-900">{testimonial.name}</p>
           </div>
         ))}
