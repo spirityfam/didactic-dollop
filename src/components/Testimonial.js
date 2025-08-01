@@ -4,17 +4,17 @@ const testimonials = [
   {
     name: "Rajan Handa",
     videoId: "yc8kqhQEfRQ",
-    thumbnail: "/logo2.png",
+    thumbnail: "/logo 2.png",
   },
   {
     name: "Diksha",
     videoId: "mvjXFphSUck",
-    thumbnail: "/logo2.png",
+    thumbnail: "/logo 2.png",
   },
   {
     name: "Geeta Devgan",
     videoId: "-xpELLzE6JQ",
-    thumbnail: "/logo2.png",
+    thumbnail: "/logo 2.png",
   },
 ];
 
