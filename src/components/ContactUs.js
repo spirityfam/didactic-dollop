@@ -33,7 +33,7 @@ export default function ContactUs() {
       facebook: 'https://www.facebook.com/Spirityfam',
       instagram: 'https://www.instagram.com/spirityfam/',
       whatsapp: 'https://wa.me/919958715050',
-      youtube: 'https://www.youtube.com/@spiritywellness'
+      youtube: 'https://www.youtube.com/@spirityfam/shorts'
     };
     window.open(urls[platform], '_blank');
   };
