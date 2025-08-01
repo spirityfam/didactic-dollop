@@ -77,25 +77,34 @@
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 300px; /* YouTube Shorts width */
-  height: calc(300px * (16 / 9)); /* YouTube Shorts aspect ratio */
+  max-width: 280px; /* YouTube Shorts width */
+  height: calc(280px * (16 / 9)); /* 9:16 aspect ratio for Shorts */
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 2px 16px rgba(80, 0, 120, 0.12);
   margin: 0 auto; /* Center the container */
 }
 
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
 @media (min-width: 768px) {
   .video-container {
-    max-width: 350px; /* Slightly larger on desktop */
-    height: calc(350px * (16 / 9));
+    max-width: 320px; /* Slightly larger on desktop */
+    height: calc(320px * (16 / 9));
   }
 }
 
 @media (min-width: 1024px) {
   .video-container {
-    max-width: 400px; /* Even larger on larger screens */
-    height: calc(400px * (16 / 9));
+    max-width: 360px; /* Even larger on larger screens */
+    height: calc(360px * (16 / 9));
   }
 }
 
