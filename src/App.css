@@ -74,24 +74,22 @@
   padding: 2rem 1.5rem;
 }
 
-.video-wrapper {
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  padding-bottom: calc(320px * (16 / 9));
+  height: 0;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 2px 16px rgba(80, 0, 120, 0.12);
 }
 
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 320px; /* optional, adjust for mobile-first vertical display */
-  padding-bottom: calc(320px * (16 / 9)); /* ensures vertical ratio */
-  height: 0;
-  overflow: hidden;
-}
-
 .video-container iframe {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
 }

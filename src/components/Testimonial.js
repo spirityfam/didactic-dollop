@@ -14,11 +14,10 @@ const Testimonial = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {testimonials.map((t, idx) => (
           <div key={idx} className="testimonial-tile flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay={idx * 100}>
-            <div className="video-container mb-4 w-full">
+            <div className="video-container mb-4">
               <iframe
                 src={`https://www.youtube.com/embed/${t.video}?rel=0&modestbranding=1`}
                 title={`${t.name} Testimonial`}
-                className="w-full h-full rounded-xl shadow-md"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
