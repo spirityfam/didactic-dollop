@@ -33,12 +33,13 @@ const Testimonial = () => (
           >
             <div className="video-container mb-4">
               <iframe
-                src={`https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1`}
+                src={`https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&controls=1`}
                 title={`${testimonial.name} Testimonial`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
+                style={{ aspectRatio: '9/16' }}
               />
             </div>
             <p className="font-semibold text-lg text-purple-900">{testimonial.name}</p>
