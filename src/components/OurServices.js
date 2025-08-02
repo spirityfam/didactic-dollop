@@ -11,7 +11,7 @@ const services = [
   },
   {
     title: "Kid's Nutrition",
-    desc: 'Essential vitamins, minerals, and protein to support healthy growth and development and promote overall well‑being in children.',
+    desc: 'Essential vitamins, minerals, and protein support healthy growth, development, and overall well-being in children.',
   },
   {
     title: 'Sleep & Stress Management',
