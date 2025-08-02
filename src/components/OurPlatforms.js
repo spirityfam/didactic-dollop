@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const platforms = [
   {
     title: "Wellness Centers",
-    desc: "Visit our Spirity Wellness Centers for body analysis, personalized consultations, and community wellness sessions.",
+    desc: "Visit our Spirity Wellness Centers for:\n- Body analysis\n- Personalized consultations\n- Community wellness sessions\nExperience a holistic approach to health and well-being.",
     videoUrl: "/testimonial1.mp4",
     name: "Physical Centers"
   },
