@@ -2,12 +2,12 @@ import React from 'react';
 
 const services = [
   {
-    title: 'Weight Loss & Gain',
-    desc: 'Two sides of the fitness journey, each requiring a strategic approach to achieve a healthy body composition.',
+    title: 'Weight Management',
+    desc: 'Comprehensive approach to achieving and maintaining your ideal weight through balanced nutrition and lifestyle strategies.',
   },
   {
     title: 'Muscle Gain',
-    desc: 'Balance protein, carbohydrates, and healthy fats to fuel workouts and promote muscle development.',
+    desc: 'Balance proteins, carbs, and healthy fats to fuel workouts and support muscle growth.',
   },
   {
     title: "Kid's Nutrition",
@@ -15,15 +15,15 @@ const services = [
   },
   {
     title: 'Sleep & Stress Management',
-    desc: 'Physical and mental recovery, while effective stress management helps balance hormones and maintain emotional well‑being.',
+    desc: 'Effective stress management supports physical and mental recovery, balances hormones, and promotes emotional well-being.',
   },
   {
     title: 'Skin Care',
-    desc: 'A personalized skin‑care routine, along with healthy lifestyle choices, can significantly enhance your skin\'s health and appearance.',
+    desc: 'A personalized skin-care routine and healthy lifestyle choices can greatly improve your skin\'s health and appearance.',
   },
   {
     title: 'Boost Energy',
-    desc: 'Boosting energy levels naturally involves a combination of healthy habits that support both physical and mental well‑being.',
+    desc: 'Boosting energy levels naturally involves healthy habits that enhance physical and mental well-being.',
   },
 ];
 
